@@ -1,5 +1,5 @@
 import { HomeAssistant } from "custom-card-helpers";
-import { PowerFlowCardPlusConfig } from "../van-consumables-flow-card-plus-config";
+import { VanConsumablesFlowCardPlusConfig } from "../van-consumables-flow-card-plus-config";
 import { isEntityAvailable } from "../states/utils/existenceEntity";
 import { unavailableOrMisconfiguredError } from "./unavailableError";
 import { getEntityState } from "../states/utils/getEntityState";
@@ -8,7 +8,7 @@ import { displayValue } from "./displayValue";
 
 export const displayNonFossilState = (
   hass: HomeAssistant,
-  config: PowerFlowCardPlusConfig,
+  config: VanConsumablesFlowCardPlusConfig,
   entityFossil: string,
   totalFromGrid: number
 ): string | number => {

@@ -1,8 +1,8 @@
 import { html, svg } from "lit";
-import { PowerFlowCardPlus } from "../van-consumables-flow-card-plus";
+import { VanConsumablesFlowCardPlus } from "../van-consumables-flow-card-plus";
 import { generalSecondarySpan } from "./spans/generalSecondarySpan";
 import { displayNonFossilState } from "../utils/displayNonFossilState";
-import { ConfigEntities, PowerFlowCardPlusConfig } from "../van-consumables-flow-card-plus-config";
+import { ConfigEntities, VanConsumablesFlowCardPlusConfig } from "../van-consumables-flow-card-plus-config";
 import { NewDur, TemplatesObj } from "../type";
 import { styleLine } from "../utils/styleLine";
 import { computeIndividualFlowRate } from "../utils/computeFlowRate";
@@ -18,8 +18,8 @@ interface NonFossil {
 }
 
 export const nonFossilElement = (
-  main: PowerFlowCardPlus,
-  config: PowerFlowCardPlusConfig,
+  main: VanConsumablesFlowCardPlus,
+  config: VanConsumablesFlowCardPlusConfig,
   { nonFossil, entities, templatesObj, grid, newDur }: NonFossil
 ) => {
   return html`${!nonFossil.hasPercentage

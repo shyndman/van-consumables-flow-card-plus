@@ -11,8 +11,8 @@ module.exports = {
         replacements: [
           {
             files: ["dist/van-consumables-flow-card-plus.js"],
-            from: /Power Flow Card Plus v(\d+\.\d+\.\d+)/,
-            to: "Power Flow Card Plus v${nextRelease.version}",
+            from: /Van Consumables Flow Card Plus v(\d+\.\d+\.\d+)/,
+            to: "Van Consumables Flow Card Plus v${nextRelease.version}",
             results: [
               {
                 file: "dist/van-consumables-flow-card-plus.js",

@@ -1,9 +1,9 @@
 import { html, svg } from "lit";
-import { PowerFlowCardPlus } from "../../van-consumables-flow-card-plus";
+import { VanConsumablesFlowCardPlus } from "../../van-consumables-flow-card-plus";
 import { classMap } from "lit/directives/class-map.js";
 import { NewDur } from "../../type";
 import { styleLine } from "../../utils/styleLine";
-import { PowerFlowCardPlusConfig } from "../../van-consumables-flow-card-plus-config";
+import { VanConsumablesFlowCardPlusConfig } from "../../van-consumables-flow-card-plus-config";
 import { showLine } from "../../utils/showLine";
 import { IndividualObject } from "../../states/raw/individual/getIndividualObject";
 import { flowSolarToHome } from "./solarToHome";
@@ -21,7 +21,7 @@ export interface Flows {
   newDur: NewDur;
 }
 
-export const flowElement = (config: PowerFlowCardPlusConfig, { battery, grid, individual, solar, newDur }: Flows) => {
+export const flowElement = (config: VanConsumablesFlowCardPlusConfig, { battery, grid, individual, solar, newDur }: Flows) => {
   return html`
   ${flowSolarToHome(config, { battery, grid, individual, solar, newDur })}
   ${flowSolarToGrid(config, { battery, grid, individual, solar, newDur })}

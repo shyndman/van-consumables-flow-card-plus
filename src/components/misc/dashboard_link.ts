@@ -1,8 +1,8 @@
 import { html } from "lit";
-import { PowerFlowCardPlusConfig } from "../../van-consumables-flow-card-plus-config";
+import { VanConsumablesFlowCardPlusConfig } from "../../van-consumables-flow-card-plus-config";
 import { HomeAssistant } from "custom-card-helpers";
 
-export const dashboardLinkElement = (config: PowerFlowCardPlusConfig, hass: HomeAssistant) => {
+export const dashboardLinkElement = (config: VanConsumablesFlowCardPlusConfig, hass: HomeAssistant) => {
   return config.dashboard_link || config.second_dashboard_link
     ? html`
         <div class="card-actions">

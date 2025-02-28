@@ -1,4 +1,4 @@
-import { PowerFlowCardPlusConfig } from "../van-consumables-flow-card-plus-config";
+import { VanConsumablesFlowCardPlusConfig } from "../van-consumables-flow-card-plus-config";
 import { IndividualObject } from "../states/raw/individual/getIndividualObject";
 
 const filterUnusedIndividualObjs = (individualObjs: IndividualObject[]): IndividualObject[] => {
@@ -12,7 +12,7 @@ const getIndividualObjSortPowerMode = (individualObjs: IndividualObject[], index
   return filteredIndividualObjs?.[index] ?? undefined;
 };
 
-export const getTopLeftIndividual = (config: PowerFlowCardPlusConfig, individualObjs: IndividualObject[]): IndividualObject | undefined => {
+export const getTopLeftIndividual = (config: VanConsumablesFlowCardPlusConfig, individualObjs: IndividualObject[]): IndividualObject | undefined => {
   const mode = config.individual_mode_config?.mode;
   switch (mode) {
     case "sort_power": {
@@ -23,7 +23,7 @@ export const getTopLeftIndividual = (config: PowerFlowCardPlusConfig, individual
   }
 };
 
-export const getBottomLeftIndividual = (config: PowerFlowCardPlusConfig, individualObjs: IndividualObject[]): IndividualObject | undefined => {
+export const getBottomLeftIndividual = (config: VanConsumablesFlowCardPlusConfig, individualObjs: IndividualObject[]): IndividualObject | undefined => {
   const mode = config.individual_mode_config?.mode;
   switch (mode) {
     case "sort_power": {
@@ -34,7 +34,7 @@ export const getBottomLeftIndividual = (config: PowerFlowCardPlusConfig, individ
   }
 };
 
-export const getTopRightIndividual = (config: PowerFlowCardPlusConfig, individualObjs: IndividualObject[]): IndividualObject | undefined => {
+export const getTopRightIndividual = (config: VanConsumablesFlowCardPlusConfig, individualObjs: IndividualObject[]): IndividualObject | undefined => {
   const mode = config.individual_mode_config?.mode;
   switch (mode) {
     case "sort_power": {
@@ -45,7 +45,7 @@ export const getTopRightIndividual = (config: PowerFlowCardPlusConfig, individua
   }
 };
 
-export const getBottomRightIndividual = (config: PowerFlowCardPlusConfig, individualObjs: IndividualObject[]): IndividualObject | undefined => {
+export const getBottomRightIndividual = (config: VanConsumablesFlowCardPlusConfig, individualObjs: IndividualObject[]): IndividualObject | undefined => {
   const mode = config.individual_mode_config?.mode;
   switch (mode) {
     case "sort_power": {
@@ -56,8 +56,8 @@ export const getBottomRightIndividual = (config: PowerFlowCardPlusConfig, indivi
   }
 };
 
-export const checkHasRightIndividual = (config: PowerFlowCardPlusConfig, individualObjs: IndividualObject[]): boolean =>
+export const checkHasRightIndividual = (config: VanConsumablesFlowCardPlusConfig, individualObjs: IndividualObject[]): boolean =>
   !!getTopRightIndividual(config, individualObjs) || !!getBottomRightIndividual(config, individualObjs);
 
-export const checkHasBottomIndividual = (config: PowerFlowCardPlusConfig, individualObjs: IndividualObject[]): boolean =>
+export const checkHasBottomIndividual = (config: VanConsumablesFlowCardPlusConfig, individualObjs: IndividualObject[]): boolean =>
   !!getBottomLeftIndividual(config, individualObjs) || !!getBottomRightIndividual(config, individualObjs);

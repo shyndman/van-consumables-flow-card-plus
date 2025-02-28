@@ -1,6 +1,6 @@
-import { PowerFlowCardPlusConfig } from "../van-consumables-flow-card-plus-config";
+import { VanConsumablesFlowCardPlusConfig } from "../van-consumables-flow-card-plus-config";
 
-export const styleLine = (power: number, config: PowerFlowCardPlusConfig): string => {
+export const styleLine = (power: number, config: VanConsumablesFlowCardPlusConfig): string => {
   if (power > 0) return "";
   const displayZeroMode = config?.display_zero_lines?.mode;
   if (displayZeroMode === "show" || displayZeroMode === undefined) return "";

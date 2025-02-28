@@ -1,12 +1,12 @@
 import { HomeAssistant } from "custom-card-helpers";
-import { PowerFlowCardPlusConfig } from "../../van-consumables-flow-card-plus-config";
+import { VanConsumablesFlowCardPlusConfig } from "../../van-consumables-flow-card-plus-config";
 import { isNumberValue } from "../../utils/utils";
 import { isEntityInverted } from "../utils/isEntityInverted";
 import { getEntityStateWatts } from "../utils/getEntityStateWatts";
 import { onlyNegative, onlyPositive } from "../utils/negativePositive";
 import { getSecondaryState } from "./base";
 
-export const getSolarState = (hass: HomeAssistant, config: PowerFlowCardPlusConfig) => {
+export const getSolarState = (hass: HomeAssistant, config: VanConsumablesFlowCardPlusConfig) => {
   const entity = config.entities.solar?.entity;
 
   if (entity === undefined) return null;
@@ -18,4 +18,4 @@ export const getSolarState = (hass: HomeAssistant, config: PowerFlowCardPlusConf
   return onlyPositive(solarStateWatts);
 };
 
-export const getSolarSecondaryState = (hass: HomeAssistant, config: PowerFlowCardPlusConfig) => getSecondaryState(hass, config, "solar");
+export const getSolarSecondaryState = (hass: HomeAssistant, config: VanConsumablesFlowCardPlusConfig) => getSecondaryState(hass, config, "solar");

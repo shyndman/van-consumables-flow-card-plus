@@ -1,5 +1,5 @@
 import { classMap } from "lit/directives/class-map.js";
-import { PowerFlowCardPlusConfig } from "../../van-consumables-flow-card-plus-config";
+import { VanConsumablesFlowCardPlusConfig } from "../../van-consumables-flow-card-plus-config";
 import { showLine } from "../../utils/showLine";
 import { html, svg } from "lit";
 import { styleLine } from "../../utils/styleLine";
@@ -9,7 +9,7 @@ import { checkShouldShowDots } from "../../utils/checkShouldShowDots";
 
 type FlowBatteryToHomeFlows = Pick<Flows, Exclude<keyof Flows, "solar">>;
 
-export const flowBatteryToHome = (config: PowerFlowCardPlusConfig, { battery, grid, individual, newDur }: FlowBatteryToHomeFlows) => {
+export const flowBatteryToHome = (config: VanConsumablesFlowCardPlusConfig, { battery, grid, individual, newDur }: FlowBatteryToHomeFlows) => {
   return battery.has && showLine(config, battery.state.toHome)
     ? html`<div
         class="lines ${classMap({

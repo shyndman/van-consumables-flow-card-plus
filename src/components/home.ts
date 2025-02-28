@@ -1,8 +1,8 @@
 import { html, svg } from "lit";
-import { PowerFlowCardPlus } from "../van-consumables-flow-card-plus";
+import { VanConsumablesFlowCardPlus } from "../van-consumables-flow-card-plus";
 import { generalSecondarySpan } from "./spans/generalSecondarySpan";
 import { NewDur, TemplatesObj } from "../type";
-import { ConfigEntities, PowerFlowCardPlusConfig } from "../van-consumables-flow-card-plus-config";
+import { ConfigEntities, VanConsumablesFlowCardPlusConfig } from "../van-consumables-flow-card-plus-config";
 import { showLine } from "../utils/showLine";
 import { IndividualObject } from "../states/raw/individual/getIndividualObject";
 
@@ -22,8 +22,8 @@ interface Home {
 }
 
 export const homeElement = (
-  main: PowerFlowCardPlus,
-  config: PowerFlowCardPlusConfig,
+  main: VanConsumablesFlowCardPlus,
+  config: VanConsumablesFlowCardPlusConfig,
   {
     home,
     entities,

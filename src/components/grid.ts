@@ -1,13 +1,13 @@
 import { html } from "lit";
-import { PowerFlowCardPlus } from "../van-consumables-flow-card-plus";
+import { VanConsumablesFlowCardPlus } from "../van-consumables-flow-card-plus";
 import { displayValue } from "../utils/displayValue";
 import { generalSecondarySpan } from "./spans/generalSecondarySpan";
 import { TemplatesObj } from "../type";
-import { ConfigEntities, PowerFlowCardPlusConfig } from "../van-consumables-flow-card-plus-config";
+import { ConfigEntities, VanConsumablesFlowCardPlusConfig } from "../van-consumables-flow-card-plus-config";
 
 export const gridElement = (
-  main: PowerFlowCardPlus,
-  config: PowerFlowCardPlusConfig,
+  main: VanConsumablesFlowCardPlus,
+  config: VanConsumablesFlowCardPlusConfig,
   { entities, grid, templatesObj }: { entities: ConfigEntities; grid: any; templatesObj: TemplatesObj }
 ) => {
   return html`<div class="circle-container grid">

@@ -1,11 +1,11 @@
 import { html, svg } from "lit";
 import { individualSecondarySpan } from "./spans/individualSecondarySpan";
 import { NewDur, TemplatesObj } from "../type";
-import { PowerFlowCardPlusConfig } from "../van-consumables-flow-card-plus-config";
+import { VanConsumablesFlowCardPlusConfig } from "../van-consumables-flow-card-plus-config";
 import { computeIndividualFlowRate } from "../utils/computeFlowRate";
 import { showLine } from "../utils/showLine";
 import { IndividualObject } from "../states/raw/individual/getIndividualObject";
-import { PowerFlowCardPlus } from "../van-consumables-flow-card-plus";
+import { VanConsumablesFlowCardPlus } from "../van-consumables-flow-card-plus";
 import { styleLine } from "../utils/styleLine";
 import { checkHasBottomIndividual } from "../utils/computeIndividualPosition";
 import { checkShouldShowDots } from "../utils/checkShouldShowDots";
@@ -20,8 +20,8 @@ interface TopIndividual {
 }
 
 export const individualRightBottomElement = (
-  main: PowerFlowCardPlus,
-  config: PowerFlowCardPlusConfig,
+  main: VanConsumablesFlowCardPlus,
+  config: VanConsumablesFlowCardPlusConfig,
   { individualObj, templatesObj, displayState, newDur, battery, individualObjs }: TopIndividual
 ) => {
   if (!individualObj) return html`<div class="spacer"></div>`;

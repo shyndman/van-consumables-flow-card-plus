@@ -1,13 +1,13 @@
 import { html } from "lit";
-import { PowerFlowCardPlus } from "../van-consumables-flow-card-plus";
-import { ConfigEntities, PowerFlowCardPlusConfig } from "../van-consumables-flow-card-plus-config";
+import { VanConsumablesFlowCardPlus } from "../van-consumables-flow-card-plus";
+import { ConfigEntities, VanConsumablesFlowCardPlusConfig } from "../van-consumables-flow-card-plus-config";
 import { generalSecondarySpan } from "./spans/generalSecondarySpan";
 import { displayValue } from "../utils/displayValue";
 import { TemplatesObj } from "../type";
 
 export const solarElement = (
-  main: PowerFlowCardPlus,
-  config: PowerFlowCardPlusConfig,
+  main: VanConsumablesFlowCardPlus,
+  config: VanConsumablesFlowCardPlusConfig,
   {
     entities,
     solar,

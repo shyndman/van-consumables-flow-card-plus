@@ -1,7 +1,7 @@
 import { html, svg } from "lit";
 import { showLine } from "../utils/showLine";
-import { PowerFlowCardPlus } from "../van-consumables-flow-card-plus";
-import { PowerFlowCardPlusConfig } from "../van-consumables-flow-card-plus-config";
+import { VanConsumablesFlowCardPlus } from "../van-consumables-flow-card-plus";
+import { VanConsumablesFlowCardPlusConfig } from "../van-consumables-flow-card-plus-config";
 import { NewDur, TemplatesObj } from "../type";
 import { IndividualObject } from "../states/raw/individual/getIndividualObject";
 import { styleLine } from "../utils/styleLine";
@@ -18,9 +18,9 @@ interface IndividualBottom {
 }
 
 export const individualLeftBottomElement = (
-  main: PowerFlowCardPlus,
+  main: VanConsumablesFlowCardPlus,
   hass: HomeAssistant,
-  config: PowerFlowCardPlusConfig,
+  config: VanConsumablesFlowCardPlusConfig,
   { individualObj, templatesObj, displayState, newDur }: IndividualBottom
 ) => {
   if (!individualObj) return html`<div class="spacer"></div>`;

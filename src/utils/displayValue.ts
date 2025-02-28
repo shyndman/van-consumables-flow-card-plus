@@ -1,18 +1,18 @@
 import { HomeAssistant, formatNumber } from "custom-card-helpers";
-import { PowerFlowCardPlusConfig } from "../van-consumables-flow-card-plus-config";
+import { VanConsumablesFlowCardPlusConfig } from "../van-consumables-flow-card-plus-config";
 import { isNumberValue, round } from "./utils";
 
 /**
  *
  * @param hass The Home Assistant instance
- * @param config The Power Flow Card Plus configuration
+ * @param config The Van Consumables Flow Card Plus configuration
  * @param value The value to display
  * @param options Different options to display the value
  * @returns value with unit, localized and rounded to the correct number of decimals
  */
 export const displayValue = (
   hass: HomeAssistant,
-  config: PowerFlowCardPlusConfig,
+  config: VanConsumablesFlowCardPlusConfig,
   value: number | string | null,
   {
     unit,

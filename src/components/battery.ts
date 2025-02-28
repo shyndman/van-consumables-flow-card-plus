@@ -1,11 +1,11 @@
 import { html } from "lit";
-import { PowerFlowCardPlus } from "../van-consumables-flow-card-plus";
-import { ConfigEntities, PowerFlowCardPlusConfig } from "../van-consumables-flow-card-plus-config";
+import { VanConsumablesFlowCardPlus } from "../van-consumables-flow-card-plus";
+import { ConfigEntities, VanConsumablesFlowCardPlusConfig } from "../van-consumables-flow-card-plus-config";
 import { displayValue } from "../utils/displayValue";
 
 export const batteryElement = (
-  main: PowerFlowCardPlus,
-  config: PowerFlowCardPlusConfig,
+  main: VanConsumablesFlowCardPlus,
+  config: VanConsumablesFlowCardPlusConfig,
   {
     battery,
     entities,

@@ -2,14 +2,14 @@ import { html } from "lit";
 import { baseSecondarySpan } from "./baseSecondarySpan";
 import { ActionConfig, HomeAssistant } from "custom-card-helpers";
 import { displayValue } from "../../utils/displayValue";
-import { PowerFlowCardPlus } from "../../van-consumables-flow-card-plus";
+import { VanConsumablesFlowCardPlus } from "../../van-consumables-flow-card-plus";
 import { TemplatesObj } from "../../type";
-import { PowerFlowCardPlusConfig } from "../../van-consumables-flow-card-plus-config";
+import { VanConsumablesFlowCardPlusConfig } from "../../van-consumables-flow-card-plus-config";
 
 export const generalSecondarySpan = (
   hass: HomeAssistant,
-  main: PowerFlowCardPlus,
-  config: PowerFlowCardPlusConfig,
+  main: VanConsumablesFlowCardPlus,
+  config: VanConsumablesFlowCardPlusConfig,
   templatesObj: TemplatesObj,
   field: {
     secondary: {

@@ -1,5 +1,5 @@
 import { classMap } from "lit/directives/class-map.js";
-import { PowerFlowCardPlusConfig } from "../../van-consumables-flow-card-plus-config";
+import { VanConsumablesFlowCardPlusConfig } from "../../van-consumables-flow-card-plus-config";
 import { showLine } from "../../utils/showLine";
 import { html, svg } from "lit";
 import { styleLine } from "../../utils/styleLine";
@@ -7,7 +7,7 @@ import { type Flows } from "./index";
 import { checkHasBottomIndividual, checkHasRightIndividual } from "../../utils/computeIndividualPosition";
 import { checkShouldShowDots } from "../../utils/checkShouldShowDots";
 
-export const flowSolarToHome = (config: PowerFlowCardPlusConfig, { battery, grid, individual, solar, newDur }: Flows) => {
+export const flowSolarToHome = (config: VanConsumablesFlowCardPlusConfig, { battery, grid, individual, solar, newDur }: Flows) => {
   return solar.has && showLine(config, solar.state.toHome || 0)
     ? html`<div
         class="lines ${classMap({

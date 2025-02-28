@@ -4,7 +4,7 @@ import { UnsubscribeFunc } from "home-assistant-js-websocket";
 import { ActionConfig, HomeAssistant, LovelaceCardEditor } from "custom-card-helpers";
 import { html, LitElement, PropertyValues, svg, TemplateResult } from "lit";
 import { customElement, property, query, state } from "lit/decorators.js";
-import { MAX_INDIVIDUAL_ENTITIES, PowerFlowCardPlusConfig } from "./van-consumables-flow-card-plus-config";
+import { MAX_INDIVIDUAL_ENTITIES, VanConsumablesFlowCardPlusConfig } from "./van-consumables-flow-card-plus-config";
 import { coerceNumber } from "./utils/utils";
 import { registerCustomCard } from "./utils/register-custom-card";
 import { RenderTemplateResult, subscribeRenderTemplate } from "./template/ha-websocket.js";
@@ -52,15 +52,15 @@ const circleCircumference = 238.76104;
 
 registerCustomCard({
   type: "van-consumables-flow-card-plus",
-  name: "Power Flow Card Plus",
+  name: "Van Consumables Flow Card Plus",
   description:
     "An extended version of the power flow card with richer options, advanced features and a few small UI enhancements. Inspired by the Energy Dashboard.",
 });
 
 @customElement("van-consumables-flow-card-plus")
-export class PowerFlowCardPlus extends LitElement {
+export class VanConsumablesFlowCardPlus extends LitElement {
   @property({ attribute: false }) public hass!: HomeAssistant;
-  @state() private _config = {} as PowerFlowCardPlusConfig;
+  @state() private _config = {} as VanConsumablesFlowCardPlusConfig;
 
   @state() private _templateResults: Partial<Record<string, RenderTemplateResult>> = {};
   @state() private _unsubRenderTemplates?: Map<string, Promise<UnsubscribeFunc>> = new Map();
@@ -73,7 +73,7 @@ export class PowerFlowCardPlus extends LitElement {
   @query("#solar-grid-flow") solarToGridFlow?: SVGSVGElement;
   @query("#solar-home-flow") solarToHomeFlow?: SVGSVGElement;
 
-  setConfig(config: PowerFlowCardPlusConfig): void {
+  setConfig(config: VanConsumablesFlowCardPlusConfig): void {
     if ((config.entities as any).individual1 || (config.entities as any).individual2) {
       throw new Error("You are using an outdated configuration. Please update your configuration to the latest version.");
     }

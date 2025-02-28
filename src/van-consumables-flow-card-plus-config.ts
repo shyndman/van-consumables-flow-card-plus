@@ -32,7 +32,7 @@ interface mainConfigOptions {
   };
 }
 
-export interface PowerFlowCardPlusConfig extends LovelaceCardConfig, mainConfigOptions {
+export interface VanConsumablesFlowCardPlusConfig extends LovelaceCardConfig, mainConfigOptions {
   entities: ConfigEntities;
 }
 

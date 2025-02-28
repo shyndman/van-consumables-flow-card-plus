@@ -6,7 +6,7 @@ import { EditSubElementEvent, LovelaceRowConfig, OpenSubElementPage, SubElementE
 import { cardConfigStruct, entitiesSchema, individualDevicesSchema } from "../schema/_schema-all";
 import localize from "../../localize/localize";
 import { IndividualDeviceType } from "../../type";
-import { ConfigEntities, IndividualField, PowerFlowCardPlusConfig } from "../../van-consumables-flow-card-plus-config";
+import { ConfigEntities, IndividualField, VanConsumablesFlowCardPlusConfig } from "../../van-consumables-flow-card-plus-config";
 import { ConfigPage } from "../types/config-page";
 
 declare global {
@@ -18,7 +18,7 @@ declare global {
 @customElement("subpage-header")
 export class SubpageHeader extends LitElement {
   public hass!: HomeAssistant;
-  @property({ attribute: false }) public config!: PowerFlowCardPlusConfig;
+  @property({ attribute: false }) public config!: VanConsumablesFlowCardPlusConfig;
   @property() protected page?: ConfigPage;
 
   protected render(): TemplateResult {

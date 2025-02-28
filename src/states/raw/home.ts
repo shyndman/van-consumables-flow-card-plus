@@ -1,5 +1,5 @@
 import { HomeAssistant } from "custom-card-helpers";
 import { getSecondaryState } from "./base";
-import { PowerFlowCardPlusConfig } from "../../van-consumables-flow-card-plus-config";
+import { VanConsumablesFlowCardPlusConfig } from "../../van-consumables-flow-card-plus-config";
 
-export const getHomeSecondaryState = (hass: HomeAssistant, config: PowerFlowCardPlusConfig) => getSecondaryState(hass, config, "home");
+export const getHomeSecondaryState = (hass: HomeAssistant, config: VanConsumablesFlowCardPlusConfig) => getSecondaryState(hass, config, "home");

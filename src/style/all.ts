@@ -1,4 +1,4 @@
-import { PowerFlowCardPlus } from "../van-consumables-flow-card-plus";
+import { VanConsumablesFlowCardPlus } from "../van-consumables-flow-card-plus";
 import { ConfigEntities } from "../van-consumables-flow-card-plus-config";
 import { IndividualObject } from "../states/raw/individual/getIndividualObject";
 import { IndividualDeviceType } from "../type";
@@ -12,7 +12,7 @@ interface AllDynamicStyles {
 }
 
 export const allDynamicStyles = (
-  main: PowerFlowCardPlus,
+  main: VanConsumablesFlowCardPlus,
   {
     grid,
     solar,
