@@ -4,7 +4,7 @@ import { UnsubscribeFunc } from "home-assistant-js-websocket";
 import { ActionConfig, HomeAssistant, LovelaceCardEditor } from "custom-card-helpers";
 import { html, LitElement, PropertyValues, svg, TemplateResult } from "lit";
 import { customElement, property, query, state } from "lit/decorators.js";
-import { MAX_INDIVIDUAL_ENTITIES, PowerFlowCardPlusConfig } from "./power-flow-card-plus-config";
+import { MAX_INDIVIDUAL_ENTITIES, PowerFlowCardPlusConfig } from "./van-consumables-flow-card-plus-config";
 import { coerceNumber } from "./utils/utils";
 import { registerCustomCard } from "./utils/register-custom-card";
 import { RenderTemplateResult, subscribeRenderTemplate } from "./template/ha-websocket.js";
@@ -51,13 +51,13 @@ import { handleAction } from "./ha/panels/lovelace/common/handle-action";
 const circleCircumference = 238.76104;
 
 registerCustomCard({
-  type: "power-flow-card-plus",
+  type: "van-consumables-flow-card-plus",
   name: "Power Flow Card Plus",
   description:
     "An extended version of the power flow card with richer options, advanced features and a few small UI enhancements. Inspired by the Energy Dashboard.",
 });
 
-@customElement("power-flow-card-plus")
+@customElement("van-consumables-flow-card-plus")
 export class PowerFlowCardPlus extends LitElement {
   @property({ attribute: false }) public hass!: HomeAssistant;
   @state() private _config = {} as PowerFlowCardPlusConfig;
@@ -115,7 +115,7 @@ export class PowerFlowCardPlus extends LitElement {
   // do not use ui editor for now, as it is not working
   public static async getConfigElement(): Promise<LovelaceCardEditor> {
     await import("./ui-editor/ui-editor");
-    return document.createElement("power-flow-card-plus-editor");
+    return document.createElement("van-consumables-flow-card-plus-editor");
   }
 
   public static getStubConfig(hass: HomeAssistant): object {
@@ -563,7 +563,7 @@ export class PowerFlowCardPlus extends LitElement {
       >
         <div
           class="card-content ${this._config.full_size ? "full-size" : ""}"
-          id="power-flow-card-plus"
+          id="van-consumables-flow-card-plus"
           style=${this._config.style_card_content ? this._config.style_card_content : ""}
         >
           ${solar.has || individualObjs?.some((individual) => individual?.has) || nonFossil.hasPercentage
@@ -673,7 +673,7 @@ export class PowerFlowCardPlus extends LitElement {
       return;
     }
 
-    const elem = this?.shadowRoot?.querySelector("#power-flow-card-plus");
+    const elem = this?.shadowRoot?.querySelector("#van-consumables-flow-card-plus");
     const widthStr = elem ? getComputedStyle(elem).getPropertyValue("width") : "0px";
     this._width = parseInt(widthStr.replace("px", ""), 10);
 

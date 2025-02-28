@@ -59,7 +59,7 @@
 ### Features
 
 * add new `inverted_entities` option (see readme) ([#43](https://github.com/ulic75/power-distribution-card/issues/43)) ([53200bb](https://github.com/ulic75/power-distribution-card/commit/53200bb99583c5365ef5f760020e6208f4899b41))
-* make power-flow-card available from the ui picker ([#38](https://github.com/ulic75/power-distribution-card/issues/38)) ([fa16d3d](https://github.com/ulic75/power-distribution-card/commit/fa16d3de57ac4e36a25f0a11e2200e185c36deb9))
+* make van-consumables-flow-card available from the ui picker ([#38](https://github.com/ulic75/power-distribution-card/issues/38)) ([fa16d3d](https://github.com/ulic75/power-distribution-card/commit/fa16d3de57ac4e36a25f0a11e2200e185c36deb9))
 
 ## [2.2.0](https://github.com/ulic75/power-distribution-card/compare/v2.1.1...v2.2.0) (2022-05-11)
 
@@ -94,11 +94,11 @@
 
 * card name
 
-card type will need to be changed from `custom:power-distribution-card` to `custom:power-flow-card`
+card type will need to be changed from `custom:power-distribution-card` to `custom:van-consumables-flow-card`
 
 ### Miscellaneous Chores
 
-* rename to power-flow-card ([#17](https://github.com/ulic75/power-distribution-card/issues/17)) ([bb26ad7](https://github.com/ulic75/power-distribution-card/commit/bb26ad7a498ddd77f72d81939769c48f786a09bd)), closes [#15](https://github.com/ulic75/power-distribution-card/issues/15)
+* rename to van-consumables-flow-card ([#17](https://github.com/ulic75/power-distribution-card/issues/17)) ([bb26ad7](https://github.com/ulic75/power-distribution-card/commit/bb26ad7a498ddd77f72d81939769c48f786a09bd)), closes [#15](https://github.com/ulic75/power-distribution-card/issues/15)
 
 ## [1.2.0](https://github.com/ulic75/power-distribution-card/compare/v1.1.1...v1.2.0) (2022-05-03)
 

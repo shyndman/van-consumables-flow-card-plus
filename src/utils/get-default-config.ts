@@ -1,6 +1,6 @@
 /* eslint-disable import/extensions */
 import { HomeAssistant } from "custom-card-helpers";
-import { DisplayZeroLinesMode } from "../power-flow-card-plus-config";
+import { DisplayZeroLinesMode } from "../van-consumables-flow-card-plus-config";
 import { getFirstEntityName } from "../states/utils/mutliEntity";
 
 export const defaultValues = {

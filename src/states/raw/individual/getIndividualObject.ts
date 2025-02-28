@@ -1,5 +1,5 @@
 import { ActionConfig, HomeAssistant } from "custom-card-helpers";
-import { PowerFlowCardPlusConfig } from "../../../power-flow-card-plus-config";
+import { PowerFlowCardPlusConfig } from "../../../van-consumables-flow-card-plus-config";
 import { IndividualDeviceType } from "../../../type";
 import { computeFieldIcon, computeFieldName } from "../../../utils/computeFieldAttributes";
 import { getIndividualSecondaryState, getIndividualState } from ".";

@@ -4,7 +4,7 @@ import { version } from "../package.json";
 
 // Log Version
 console.groupCollapsed(`%c⚡ Power Flow Card Plus v${version} is installed`, "color: #488fc2; font-weight: bold");
-console.log("Readme:", "https://github.com/flixlix/power-flow-card-plus");
+console.log("Readme:", "https://github.com/flixlix/van-consumables-flow-card-plus");
 console.groupEnd();
 
 export const logError = debounce((error: string) => {

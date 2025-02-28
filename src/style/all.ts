@@ -1,5 +1,5 @@
-import { PowerFlowCardPlus } from "../power-flow-card-plus";
-import { ConfigEntities } from "../power-flow-card-plus-config";
+import { PowerFlowCardPlus } from "../van-consumables-flow-card-plus";
+import { ConfigEntities } from "../van-consumables-flow-card-plus-config";
 import { IndividualObject } from "../states/raw/individual/getIndividualObject";
 import { IndividualDeviceType } from "../type";
 import { convertColorListToHex } from "../utils/convertColor";

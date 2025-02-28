@@ -1,5 +1,5 @@
 import { HomeAssistant } from "custom-card-helpers";
-import { PowerFlowCardPlusConfig } from "../../power-flow-card-plus-config";
+import { PowerFlowCardPlusConfig } from "../../van-consumables-flow-card-plus-config";
 import { EntityType } from "../../type";
 import { isNumberValue } from "../../utils/utils";
 import { isEntityInverted } from "../utils/isEntityInverted";

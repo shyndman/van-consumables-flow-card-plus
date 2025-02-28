@@ -1,5 +1,5 @@
 import { HomeAssistant } from "custom-card-helpers";
-import { PowerFlowCardPlusConfig } from "../power-flow-card-plus-config";
+import { PowerFlowCardPlusConfig } from "../van-consumables-flow-card-plus-config";
 import { isEntityAvailable } from "../states/utils/existenceEntity";
 import { unavailableOrMisconfiguredError } from "./unavailableError";
 import { getEntityState } from "../states/utils/getEntityState";

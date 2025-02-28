@@ -1,5 +1,5 @@
 import { ActionConfig, HomeAssistant } from "custom-card-helpers";
-import { IndividualField, PowerFlowCardPlusConfig } from "../../power-flow-card-plus-config";
+import { IndividualField, PowerFlowCardPlusConfig } from "../../van-consumables-flow-card-plus-config";
 
 export interface EntityConfig {
   entity: string;

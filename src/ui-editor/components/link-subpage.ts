@@ -2,7 +2,7 @@ import { mdiChevronRight } from "@mdi/js";
 import { css, CSSResultGroup, html, LitElement, PropertyValues, TemplateResult } from "lit";
 import { customElement, property, query, state } from "lit-element";
 import { fireEvent } from "custom-card-helpers";
-import { IndividualField } from "../../power-flow-card-plus-config";
+import { IndividualField } from "../../van-consumables-flow-card-plus-config";
 
 const afterNextRender = (cb: (value: unknown) => void): void => {
   requestAnimationFrame(() => setTimeout(cb, 0));

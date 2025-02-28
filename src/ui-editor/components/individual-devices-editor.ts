@@ -5,7 +5,7 @@ import { EditSubElementEvent, LovelaceRowConfig, SubElementEditorConfig } from "
 import { individualDevicesSchema } from "../schema/_schema-all";
 import localize from "../../localize/localize";
 import { IndividualDeviceType } from "../../type";
-import { PowerFlowCardPlusConfig } from "../../power-flow-card-plus-config";
+import { PowerFlowCardPlusConfig } from "../../van-consumables-flow-card-plus-config";
 import "./individual-row-editor";
 
 export interface GUIModeChangedEvent {

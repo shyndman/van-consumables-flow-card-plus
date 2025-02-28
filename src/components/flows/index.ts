@@ -1,9 +1,9 @@
 import { html, svg } from "lit";
-import { PowerFlowCardPlus } from "../../power-flow-card-plus";
+import { PowerFlowCardPlus } from "../../van-consumables-flow-card-plus";
 import { classMap } from "lit/directives/class-map.js";
 import { NewDur } from "../../type";
 import { styleLine } from "../../utils/styleLine";
-import { PowerFlowCardPlusConfig } from "../../power-flow-card-plus-config";
+import { PowerFlowCardPlusConfig } from "../../van-consumables-flow-card-plus-config";
 import { showLine } from "../../utils/showLine";
 import { IndividualObject } from "../../states/raw/individual/getIndividualObject";
 import { flowSolarToHome } from "./solarToHome";

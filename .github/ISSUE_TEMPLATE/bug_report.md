@@ -42,10 +42,10 @@ Add any other context about the problem here.
 
 **Please make sure all of this applies and check the checkboxes, by writing "X" inside of them.**
 
-- [ ] I understand that this is a channel for reporting bugs, not a support forum (If you need help configuring the card, go to: [Discussions](https://github.com/flixlix/power-flow-card-plus/discussions)).
+- [ ] I understand that this is a channel for reporting bugs, not a support forum (If you need help configuring the card, go to: [Discussions](https://github.com/flixlix/van-consumables-flow-card-plus/discussions)).
 
 - [ ] I have the latest version of the card installed.
 
 - [ ] I have cleared my browser cache **after** installing, updating and configuring the card.
 
-- [ ] The issue is not related to the UI-Editor not being rendered: "s.entries is not a function". This is a known bug, and is caused by Card Mod. Check the warning this [readme section](https://github.com/flixlix/power-flow-card-plus#usage) for more information on how to fix it.
+- [ ] The issue is not related to the UI-Editor not being rendered: "s.entries is not a function". This is a known bug, and is caused by Card Mod. Check the warning this [readme section](https://github.com/flixlix/van-consumables-flow-card-plus#usage) for more information on how to fix it.

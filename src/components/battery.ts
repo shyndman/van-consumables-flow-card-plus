@@ -1,6 +1,6 @@
 import { html } from "lit";
-import { PowerFlowCardPlus } from "../power-flow-card-plus";
-import { ConfigEntities, PowerFlowCardPlusConfig } from "../power-flow-card-plus-config";
+import { PowerFlowCardPlus } from "../van-consumables-flow-card-plus";
+import { ConfigEntities, PowerFlowCardPlusConfig } from "../van-consumables-flow-card-plus-config";
 import { displayValue } from "../utils/displayValue";
 
 export const batteryElement = (

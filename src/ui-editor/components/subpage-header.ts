@@ -6,7 +6,7 @@ import { EditSubElementEvent, LovelaceRowConfig, OpenSubElementPage, SubElementE
 import { cardConfigStruct, entitiesSchema, individualDevicesSchema } from "../schema/_schema-all";
 import localize from "../../localize/localize";
 import { IndividualDeviceType } from "../../type";
-import { ConfigEntities, IndividualField, PowerFlowCardPlusConfig } from "../../power-flow-card-plus-config";
+import { ConfigEntities, IndividualField, PowerFlowCardPlusConfig } from "../../van-consumables-flow-card-plus-config";
 import { ConfigPage } from "../types/config-page";
 
 declare global {

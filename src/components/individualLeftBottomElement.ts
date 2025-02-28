@@ -1,7 +1,7 @@
 import { html, svg } from "lit";
 import { showLine } from "../utils/showLine";
-import { PowerFlowCardPlus } from "../power-flow-card-plus";
-import { PowerFlowCardPlusConfig } from "../power-flow-card-plus-config";
+import { PowerFlowCardPlus } from "../van-consumables-flow-card-plus";
+import { PowerFlowCardPlusConfig } from "../van-consumables-flow-card-plus-config";
 import { NewDur, TemplatesObj } from "../type";
 import { IndividualObject } from "../states/raw/individual/getIndividualObject";
 import { styleLine } from "../utils/styleLine";

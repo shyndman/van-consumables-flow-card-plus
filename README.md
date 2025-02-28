@@ -2,14 +2,14 @@
 
 [![ko-fi support](https://img.shields.io/badge/support-me-ff5e5b?style=flat-square&logo=ko-fi)](https://ko-fi.com/flixlix)
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-41BDF5.svg?style=flat-square)](https://github.com/hacs/integration)
-![GitHub total downloads](https://img.shields.io/github/downloads/flixlix/power-flow-card-plus/total?style=flat-square)
-![commit_activity](https://img.shields.io/github/commit-activity/y/flixlix/power-flow-card-plus?color=brightgreen&label=Commits&style=flat-square)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/flixlix/power-flow-card-plus?style=flat-square)
+![GitHub total downloads](https://img.shields.io/github/downloads/flixlix/van-consumables-flow-card-plus/total?style=flat-square)
+![commit_activity](https://img.shields.io/github/commit-activity/y/flixlix/van-consumables-flow-card-plus?color=brightgreen&label=Commits&style=flat-square)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/flixlix/van-consumables-flow-card-plus?style=flat-square)
 
 ![2023-03-26-13-04-07](https://user-images.githubusercontent.com/61006057/227771568-78497ecc-e863-46f2-b29e-e15c7c20a154.gif)
 
-> [!TIP]  
-> Version 0.2.0 is out now! ✨ Check out the [new features](https://github.com/flixlix/power-flow-card-plus/releases/tag/v0.2.0)!
+> [!TIP]
+> Version 0.2.0 is out now! ✨ Check out the [new features](https://github.com/flixlix/van-consumables-flow-card-plus/releases/tag/v0.2.0)!
 
 ## Additional Features / Enhancements
 
@@ -66,17 +66,17 @@ After having HACS installed, simply search for "Power Flow Card Plus" and downlo
 <details>
 <summary>Manual install</summary>
 
-1. Download and copy `power-flow-card-plus.js` from the [latest release](https://github.com/flixlix/power-flow-card-plus/releases/latest) into your `config/www` directory.
+1. Download and copy `van-consumables-flow-card-plus.js` from the [latest release](https://github.com/flixlix/van-consumables-flow-card-plus/releases/latest) into your `config/www` directory.
 
 2. Add the resource reference as decribed below.
 
 ### Add resource reference
 
-If you configure Dashboards via YAML, add a reference to `power-flow-card-plus.js` inside your `configuration.yaml`:
+If you configure Dashboards via YAML, add a reference to `van-consumables-flow-card-plus.js` inside your `configuration.yaml`:
 
 ```yaml
 resources:
-  - url: /local/power-flow-card-plus.js
+  - url: /local/van-consumables-flow-card-plus.js
     type: module
 ```
 
@@ -87,14 +87,14 @@ Else, if you prefer the graphical editor, use the menu to add the resource:
 3. Click three dot icon
 4. Select Resources
 5. Hit (+ ADD RESOURCE) icon
-6. Enter URL `/local/power-flow-card-plus.js` and select type "JavaScript Module".
-   (Use `/hacsfiles/power-flow-card-plus/power-flow-card-plus.js` and select "JavaScript Module" for HACS install if HACS didn't do it already)
+6. Enter URL `/local/van-consumables-flow-card-plus.js` and select type "JavaScript Module".
+   (Use `/hacsfiles/van-consumables-flow-card-plus/van-consumables-flow-card-plus.js` and select "JavaScript Module" for HACS install if HACS didn't do it already)
 
 </details>
 
 ## Usage
 
-> [!WARNING]  
+> [!WARNING]
 > This card offers a **LOT** of configuration options. Don't worry, if you want your card's appearance to match the oficial Energy Flow Card, you will only need to setup the entities. The rest of the options only enable further customization. If this is your goal, please go to [Minimal Configuration](#minimal-configuration)
 
 ### Options
@@ -103,7 +103,7 @@ Else, if you prefer the graphical editor, use the menu to add the resource:
 
 | Name                        | Type      |                 Default                  | Description                                                                                                                                                                                                              |
 | --------------------------- | --------- | :--------------------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| type                        | `string`  |               **required**               | `custom:power-flow-card-plus`.                                                                                                                                                                                           |
+| type                        | `string`  |               **required**               | `custom:van-consumables-flow-card-plus`.                                                                                                                                                                                           |
 | entities                    | `object`  |               **required**               | One or more sensor entities, see [entities object](#entities-object) for additional entity options.                                                                                                                      |
 | title                       | `string`  |                                          | Shows a title at the top of the card.                                                                                                                                                                                    |
 | dashboard_link              | `string`  |                                          | Shows a link to an Energy Dashboard. Should be a url path to location of your choice. If you wanted to link to the built-in dashboard you would enter `/energy` for example.                                             |
@@ -273,13 +273,13 @@ This Feature allows you to configure an additional small text for each Individua
 This feature allows you to configure how the card handles a Grid Power Outage scenario.
 
 | Name                | Type                  | Description                                                                                                                                                                               |
-| ------------------- | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | 
+| ------------------- | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | entity              | `string` required     | Entity ID providing a state that changes when there is a Power Outage. (eg: `binary_sensor.grid_connection_status`). Doesn't need to be a binary_sensor.                                  |
 | entity_generator    | `string`              | Entity ID providing the power of a Generator. (eg: `sensor.generator_power`). This is optional, meaning if you don't use this, the card will assume the grid is the only source of power. |
 | state_alert         | `string`              | The state the provided entity is at when there is a power outage. Default is `on`, meaning if the entity's state is `on` the card will assume there is a power outage.                    |
 | icon_alert          | `string`              | An icon path to be override the grid icon when there is a power outage. Default is `mdi:transmission-tower-off`.                                                                          |
 | label_alert         | `string`              | A text that will be displayed below the icon when there is a power outage.                                                                                                                |
-| calculate_flow_rate | `boolean` or `number` | `false`                                                                                                                                                                                   | 
+| calculate_flow_rate | `boolean` or `number` | `false`                                                                                                                                                                                   |
 |                     |                       | If set to `true`, the flow rate will be calculated by using the flow rate formula (either the new or the old one, depending on your configuration). If set to a number, the flow rate will be set to that number. For example, defining the value `10` will ensure one dot will flow every 10 seconds. |
 
 #### Display Zero Lines
@@ -302,7 +302,7 @@ In these examples I decided to use the Split entities option, but feel free to u
 #### Only Grid
 
 ```yaml
-type: custom:power-flow-card-plus
+type: custom:van-consumables-flow-card-plus
 entities:
   grid:
     entity: sensor.grid_power
@@ -320,7 +320,7 @@ This should give you something like this:
 ##### Grid and Solar
 
 ```yaml
-type: custom:power-flow-card-plus
+type: custom:van-consumables-flow-card-plus
 entities:
   grid:
     entity:
@@ -339,7 +339,7 @@ This should give you something like this:
 ##### Grid, Solar and Battery
 
 ```yaml
-type: custom:power-flow-card-plus
+type: custom:van-consumables-flow-card-plus
 entities:
   grid:
     entity:
@@ -370,7 +370,7 @@ This should give you something like this:
 > This Configuration is a little bit random, it's just here to demonstrate the capabilities of this card.
 
 ```yaml
-type: custom:power-flow-card-plus
+type: custom:van-consumables-flow-card-plus
 entities:
   home:
     entity: sensor.home_consumption
@@ -424,7 +424,7 @@ This should give you something like this:
 ### Random Configurations
 
 ![2023-03-26-13-04-07](https://user-images.githubusercontent.com/61006057/227771568-78497ecc-e863-46f2-b29e-e15c7c20a154.gif)
-![recording_multi_indiv](https://github.com/flixlix/power-flow-card-plus/assets/61006057/337b921c-306c-4447-9c6f-1b4b72579731)
+![recording_multi_indiv](https://github.com/flixlix/van-consumables-flow-card-plus/assets/61006057/337b921c-306c-4447-9c6f-1b4b72579731)
 ![demo](https://user-images.githubusercontent.com/61006057/232316110-eff64095-e147-4462-abfc-961c88d5ada8.gif)
 ![demo_grid_solar_bat](https://user-images.githubusercontent.com/61006057/233212881-89af5af0-4b25-4a7c-9da1-008801129130.png)
 
@@ -434,7 +434,7 @@ This should give you something like this:
 > I've made a lot of improvements in version 0.2 for the UI-Editor. Now each field has its own subpage, meaning there is now much less scrolling.
 > The biggest change in the editor is the fact that you can now add up to 4 individual devices, all through the UI! 🥳
 
-![ui-editor](https://github.com/flixlix/power-flow-card-plus/assets/61006057/a5d0cbb4-f430-4ba0-9c6f-8c93689206d7)
+![ui-editor](https://github.com/flixlix/van-consumables-flow-card-plus/assets/61006057/a5d0cbb4-f430-4ba0-9c6f-8c93689206d7)
 
 ### Flow Formula
 
@@ -491,11 +491,11 @@ At the end of the day these are two options and depending on what you're interes
 Here is my to-do list containing a few enhancements I am planning in adding. The ones at the top are bigger priorities, so they’ll probably be available before the ones at the bottom.
 
 - [x] Change Tap Action Behavior to be compatible with Browser Mod
-- Fill the circles [#89](https://github.com/flixlix/power-flow-card-plus/issues/89)
-- [x] More than two Individual Devices [#54](https://github.com/flixlix/power-flow-card-plus/issues/54)
-- More than one solar source [#23](https://github.com/flixlix/power-flow-card-plus/issues/23)
-- Display Connected/Disconnected status [#111](https://github.com/flixlix/power-flow-card-plus/issues/111)
-- Grid Feed In Circle [#119](https://github.com/flixlix/power-flow-card-plus/issues/119)
-- Improve performance [#144](https://github.com/flixlix/power-flow-card-plus/issues/144)
+- Fill the circles [#89](https://github.com/flixlix/van-consumables-flow-card-plus/issues/89)
+- [x] More than two Individual Devices [#54](https://github.com/flixlix/van-consumables-flow-card-plus/issues/54)
+- More than one solar source [#23](https://github.com/flixlix/van-consumables-flow-card-plus/issues/23)
+- Display Connected/Disconnected status [#111](https://github.com/flixlix/van-consumables-flow-card-plus/issues/111)
+- Grid Feed In Circle [#119](https://github.com/flixlix/van-consumables-flow-card-plus/issues/119)
+- Improve performance [#144](https://github.com/flixlix/van-consumables-flow-card-plus/issues/144)
 
 I am still just one person working on this project and obviously have other things going on in my life, so feel free to contribute to the project. You can also feel free to create a PR with a new feature and I'll try my best to review it 😊

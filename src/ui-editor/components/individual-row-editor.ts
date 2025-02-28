@@ -8,7 +8,7 @@ import { HomeAssistant } from "custom-card-helpers";
 import { loadSortable, SortableInstance } from "../utils/sortable.ondemand";
 import { fireEvent } from "../utils/fire_event";
 import { sortableStyles } from "../utils/sortable_styles";
-import { MAX_INDIVIDUAL_ENTITIES, PowerFlowCardPlusConfig } from "../../power-flow-card-plus-config";
+import { MAX_INDIVIDUAL_ENTITIES, PowerFlowCardPlusConfig } from "../../van-consumables-flow-card-plus-config";
 import { loadHaForm } from "../utils/loadHAForm";
 import { individualSchema } from "../schema/individual";
 import localize from "../../localize/localize";

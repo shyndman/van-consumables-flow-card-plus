@@ -1,11 +1,11 @@
 import { html, svg } from "lit";
 import { individualSecondarySpan } from "./spans/individualSecondarySpan";
 import { NewDur, TemplatesObj } from "../type";
-import { PowerFlowCardPlusConfig } from "../power-flow-card-plus-config";
+import { PowerFlowCardPlusConfig } from "../van-consumables-flow-card-plus-config";
 import { computeIndividualFlowRate } from "../utils/computeFlowRate";
 import { showLine } from "../utils/showLine";
 import { IndividualObject } from "../states/raw/individual/getIndividualObject";
-import { PowerFlowCardPlus } from "../power-flow-card-plus";
+import { PowerFlowCardPlus } from "../van-consumables-flow-card-plus";
 import { styleLine } from "../utils/styleLine";
 import { checkHasBottomIndividual } from "../utils/computeIndividualPosition";
 import { checkShouldShowDots } from "../utils/checkShouldShowDots";
