@@ -45,7 +45,6 @@ import {
 } from "./utils/computeIndividualPosition";
 import { individualRightTopElement } from "./components/individualRightTopElement";
 import { individualRightBottomElement } from "./components/individualRightBottomElement";
-import { fireEvent } from "./ui-editor/utils/fire_event";
 import { handleAction } from "./ha/panels/lovelace/common/handle-action";
 
 const circleCircumference = 238.76104;
@@ -54,7 +53,7 @@ registerCustomCard({
   type: "van-consumables-flow-card-plus",
   name: "Van Consumables Flow Card Plus",
   description:
-    "An extended version of the power flow card with richer options, advanced features and a few small UI enhancements. Inspired by the Energy Dashboard.",
+    "Visualizes the flow of our camper van's consumables. Inspired by the Energy Dashboard.",
 });
 
 @customElement("van-consumables-flow-card-plus")
